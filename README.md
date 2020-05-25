@@ -36,11 +36,11 @@
 >
 #### Compile the contract
 >
-   truffle compile
+    truffle compile
 >
 #### Start Ganache
 >
-   ganache-cli
+    ganache-cli
 >
 #### Use truffle test
 >
