@@ -284,6 +284,7 @@ contract ERC721 is Pausable, ERC165 {
         // TODO: update token counts & transfer ownership of the token ID
         Counters.decrement(_ownedTokensCount[from]);
         Counters.increment(_ownedTokensCount[to]);
+        _tokenOwner[tokenId] = to;
         
 
         // TODO: emit correct event
@@ -559,9 +560,10 @@ contract CustomERC721Token is ERC721Metadata("MindPeace", "MNP", "https://s3-us-
     //      -takes in a 'to' address, tokenId, and tokenURI as parameters
     //      -returns a true boolean upon completion of the function
     //      -calls the superclass mint and setTokenURI functions
-    function mint(address to, uint tokenId) public onlyOwner whenNotPaused {
-        setTokenURI(tokenId);
+    function mint(address to, uint tokenId) public onlyOwner {
+        
         super._mint(to, tokenId);
+        setTokenURI(tokenId);
         //return true;
     }
 
