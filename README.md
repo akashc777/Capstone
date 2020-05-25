@@ -30,19 +30,19 @@
 >
 
 ## test
-install npm packages
+#### install npm packages
 >
     npm install
 >
-Compile the contract
+#### Compile the contract
 >
    truffle compile
 >
-Start Ganache
+#### Start Ganache
 >
    ganache-cli
 >
-Use truffle test
+#### Use truffle test
 >
     truffle test
 >
